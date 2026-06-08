@@ -1381,7 +1381,7 @@ var d41d8cd98f00b204e9800998ecf8427e_LibraryDetectorTests = {
         url: 'https://nuxtjs.org/',
         npm: 'nuxt',
         test: function(win) {
-            if (win.__NUXT__ || win.$nuxt || win.useNuxtApp || document.getElementById('__NUXT_DATA__') || [...win.document.querySelectorAll('*')].some(el => el.__vue__?.nuxt)) {
+            if (win.__NUXT__ || win.$nuxt || win.useNuxtApp || document.getElementById('__NUXT_DATA__') || [...win.document.querySelectorAll('*')].some(el => el.__vue__ && el.__vue__.nuxt)) {
                 return { version: UNKNOWN_VERSION };
             }
             return false;
